@@ -1,265 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ta">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Malik Dubai</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamil Harmonic Trader Raj</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2152917021939780');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2152917021939780&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 
-<!-- META PIXEL -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
 
-fbq('init','1153714410071909');
-fbq('track','PageView');
-</script>
+        body {
+            background-color: #080d1a;
+            background-image: radial-gradient(circle at 50% 20%, #15203b 0%, #080d1a 80%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #ffffff;
+        }
 
-<style>
+        .card {
+            background: linear-gradient(145deg, #162238 0%, #0d1526 100%);
+            border: 1px solid rgba(0, 178, 255, 0.2);
+            border-radius: 28px;
+            padding: 35px 25px;
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 178, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
 
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
+        .avatar-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            border: 3px solid #00b2ff;
+            box-shadow: 0 0 20px rgba(0, 178, 255, 0.5);
+            overflow: hidden;
+            background-color: #1b273e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-body{
-font-family:Arial;
-background:#0b0f19;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-}
+        .avatar-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-/* MAIN CARD */
+        .title {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
 
-.container{
-width:380px;
-background:#111827;
-border-radius:25px;
-overflow:hidden;
-box-shadow:0 10px 40px rgba(0,0,0,0.6);
-}
+        .subtitle-list {
+            font-size: 14px;
+            color: #d1d5db;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
 
-/* HEADER */
+        .subtitle-list p {
+            margin-bottom: 8px;
+        }
 
-.header{
-background:linear-gradient(135deg,#6a5cff,#ff3cac);
-padding:30px;
-text-align:center;
-}
+        /* Animated Glowing & Blinking Join Button */
+        .btn-join {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(90deg, #107be5 0%, #00d2ff 100%);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 700;
+            padding: 16px 24px;
+            border-radius: 30px;
+            box-shadow: 0 0 25px rgba(0, 178, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: pulse-glow 1.5s infinite ease-in-out;
+        }
 
-.profile{
-width:110px;
-height:110px;
-border-radius:20px;
-object-fit:cover;
-animation:float 3s ease-in-out infinite;
-}
+        @keyframes pulse-glow {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 15px rgba(0, 178, 255, 0.5);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 0 35px rgba(0, 210, 255, 0.9);
+                opacity: 0.92;
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 15px rgba(0, 178, 255, 0.5);
+                opacity: 1;
+            }
+        }
 
-@keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-8px);}
-100%{transform:translateY(0px);}
-}
+        .telegram-icon {
+            width: 24px;
+            height: 24px;
+            background-color: #ffffff;
+            color: #00b2ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: bold;
+        }
 
-.name{
-font-size:28px;
-font-weight:bold;
-margin-top:15px;
-}
+        .timer-text {
+            color: #9ca3af;
+            font-size: 13px;
+            margin-top: 20px;
+        }
 
-/* BADGES */
+        .footer {
+            margin-top: 35px;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 12px;
+            line-height: 1.8;
+            max-width: 380px;
+        }
 
-.badges{
-margin-top:12px;
-}
+        .footer a {
+            color: #10b981;
+            text-decoration: none;
+            font-weight: 600;
+        }
 
-.badge{
-display:inline-block;
-padding:6px 14px;
-border-radius:20px;
-font-size:13px;
-margin:5px;
-}
-
-.premium{
-background:#8b5cf6;
-}
-
-.live{
-background:#22c55e;
-}
-
-/* MEMBERS */
-
-.members{
-margin-top:10px;
-font-size:15px;
-}
-
-/* STATS */
-
-.stats{
-display:flex;
-gap:12px;
-padding:20px;
-}
-
-.card{
-flex:1;
-padding:20px;
-border-radius:15px;
-text-align:center;
-font-weight:bold;
-}
-
-.win{
-background:linear-gradient(45deg,#22c55e,#16a34a);
-}
-
-.rating{
-background:linear-gradient(45deg,#f97316,#fb923c);
-}
-
-/* TELEGRAM BUTTON */
-
-.telegram{
-margin:0 20px 20px;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-padding:16px;
-border-radius:15px;
-background:linear-gradient(90deg,#6366f1,#a855f7);
-color:white;
-font-weight:bold;
-text-decoration:none;
-font-size:16px;
-}
-
-.telegram img{
-width:20px;
-}
-
-/* FEATURES */
-
-.features{
-display:flex;
-justify-content:space-around;
-padding:20px;
-text-align:center;
-}
-
-.feature{
-font-size:13px;
-}
-
-.icon{
-width:45px;
-height:45px;
-border-radius:12px;
-display:flex;
-align-items:center;
-justify-content:center;
-margin:auto;
-margin-bottom:6px;
-font-size:20px;
-}
-
-.v{background:#22c55e;}
-.s{background:#3b82f6;}
-.p{background:#ec4899;}
-.t{background:#f59e0b;}
-
-/* FOOTER */
-
-.footer{
-text-align:center;
-padding:15px;
-font-size:13px;
-color:#9ca3af;
-}
-
-</style>
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <div class="card">
+        <div class="avatar-container">
+            <img src="logo.png" alt="Tamil Harmonic Trader Raj">
+        </div>
 
-<div class="header">
+        <h1 class="title">👑 Tamil Harmonic Trader Raj 👑</h1>
 
-<img class="profile" src="logo.png">
+        <div class="subtitle-list">
+            <p>100% இலவச ஆப்ஷன்ஸ் டிரேடிங் (95% துல்லியத்தன்மை வரை) 🔥</p>
+            <p>பேங்க் நிஃப்டி, நிஃப்டி, ஸ்டாக் ஆப்ஷன் கால்ஸ் 📊</p>
+            <p>44,500+ டிரேடர்களின் நம்பிக்கை 🌍</p>
+            <p>தினசரி அப்டேட்டுகளுக்கு எங்கள் சேனலில் இணையுங்கள் ✅</p>
+        </div>
 
-<div class="name">MALIK DUBAI</div>
+        <a href="https://t.me/+PWEk6ctiE9Q2M2I1" class="btn-join" onclick="trackLead(event)">
+            <span class="telegram-icon">➤</span>
+            இப்போது இலவசமாக இணையுங்கள்
+            <span class="telegram-icon">➤</span>
+        </a>
 
-<div class="badges">
-<span class="badge premium">⭐ Premium Analyst</span>
-<span class="badge live">🔴 Live Updates</span>
-</div>
+        <div class="timer-text"><span id="countdown">28</span> வினாடிகளில் மாற்றப்படுகிறது...</div>
+    </div>
 
-<div class="members">👥 100k+ Active Members</div>
+    <div class="footer">
+        <p>இந்த சேனல் கல்வி மற்றும் தகவல் நோக்கங்களுக்காக மட்டுமே.</p>
+        <p>Ads Managed by <a href="https://t.me/+jE7sEbzR23gwM2U1" target="_blank">Kunal</a></p>
+    </div>
 
-</div>
+    <script>
+        const targetUrl = "https://t.me/+PWEk6ctiE9Q2M2I1";
+        let seconds = 28;
+        const countdownEl = document.getElementById('countdown');
 
-<div class="stats">
+        function trackLead(e) {
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead');
+            }
+        }
 
-<div class="card win">
-96%<br>WIN RATE
-</div>
-
-<div class="card rating">
-4.1 ⭐<br>RATING
-</div>
-
-</div>
-
-<a class="telegram" href="https://t.me/">
-
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
-
-Join Telegram Channel
-
-</a>
-
-<div class="features">
-
-<div class="feature">
-<div class="icon v">✔</div>
-Verified
-</div>
-
-<div class="feature">
-<div class="icon s">🔒</div>
-Secure
-</div>
-
-<div class="feature">
-<div class="icon p">📈</div>
-Profitable
-</div>
-
-<div class="feature">
-<div class="icon t">⭐</div>
-Top Rated
-</div>
-
-</div>
-
-<div class="footer">
-© 2026 Malik Dubai - All rights reserved.
-</div>
-
-</div>
+        const timer = setInterval(() => {
+            seconds--;
+            if (countdownEl) countdownEl.innerText = seconds;
+            if (seconds <= 0) {
+                clearInterval(timer);
+                trackLead();
+                window.location.href = targetUrl;
+            }
+        }, 1000);
+    </script>
 
 </body>
 </html>
